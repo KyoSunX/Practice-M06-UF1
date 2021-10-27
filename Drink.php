@@ -2,14 +2,14 @@
 
 include "Expandible.php";
 
-class Drink extends Expandable {
+class Drink extends Expendable {
     private $healthUp;
     private $drinkUp;
     private $quantity;
     const MAX_QUANTITY = 250; //Int
 
     protected function __construct($size, $numberUsers, $nameValue, $healthUp, $drinkUp, $quantity, $MAX_QUANTITY) {
-        Expandible::__construct($size, $numberUsers, $nameValue); //testear
+        Expendable::__construct($size, $numberUsers, $nameValue); //testear
         $this->healthUp = $healthUp;
         $this->drinkUp = $drinkUp;
         $this->quantity = $quantity;
@@ -25,7 +25,7 @@ class Drink extends Expandable {
     public function setQuantity($quantity) {
         $this->quantity = $quantity;
     }
-    public function setMAX_QUANTITY($quantity) {
+    public function setMAX_QUANTITY($MAX_QUANTITY) {
         $this->MAX_QUANTITY = $MAX_QUANTITY;
     }
 
