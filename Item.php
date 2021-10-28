@@ -1,53 +1,45 @@
 <?php
 
-include "Interficie.php";
+include_once "Interficie.php";
 
-abstract class abstracteItem implements SalleGaming()
+abstract class abstracteItem implements SalleGaming
 {
+    protected $nameValue;
+    protected $size;
+    protected $numberUsers = 0;
 
-protected $nameValue == "Juan";
-protected $size;
-protected $numberUsers;
-
-protected function __construct($nameValue, $size, $numberUsers) {
-    $this->nameValue = $nameValue;
-    $this->size = $size;
-    $this->numberUsers = $numberUsers;
+    protected function construct($nameValue, $size, $numberUsers) 
+    {
+        $this->nameValue = $nameValue;
+        $this->size = $size;
+        $this->numberUsers = $numberUsers;
+        }
+    public function getNameValue()
+    {
+        return $this->nameValue;
+    }
+    public function setNameValue($nameValue)
+    {
+        $this->nameValue = $nameValue;
+        return $this;
+    }
+    public function getSize()
+    {
+        return $this->size;
+    }
+    public function setSize($size)
+    {
+        $this->size = $size;
+        return $this;
+    }
+    public function getNumberUsers()
+    {
+        return $this->numberUsers;
+    }
+    public function setNumberUsers($numberUsers)
+    {
+        $this->numberUsers = $numberUsers;
+        return $this;
+    }
+    abstract public function Use(); //TODO: Poner a Expandible + Tool la function Use();
 }
-
-public function getName() {
-    $nameValue = $this->nameValue;
-}
-public function setName ($nameValue) {
-    $nameValue = $this->nameValue;
-}
-public function __toString() {
-    echo "Todo correcto? Y yo que me alegro <3";
-}
-
-protected function __construct($nameValue)
-{
-    $this->size = $size;
-    $this-> numberUsers = $numberUsers;
-}
-
-public function getSize(){
-    $size = $this->size;
-}
-
-public function getNumberUsers(){
-    $numberUsers = $this->numberUsers;
-}
-
-public function setSize(){
-    $size = $this->size;
-}
-
-public function setgetNumberUsers(){
-    $numberUsers = $this->numberUsers;
-}
-
-abstract public function Use();
-
-}
-?>

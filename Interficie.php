@@ -3,7 +3,7 @@
 interface SalleGaming {
 
     public function getName();
-    public function setName ($nameValue);
+    public function setName ();
     public function __toString();
     
 }
