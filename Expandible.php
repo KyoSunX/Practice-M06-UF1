@@ -9,15 +9,20 @@ Constructor, __toString, Use (set numberUses = +1)
 
 include "Item.php";
 
-class Expendable extends Item
+class Expendable extends abstracteItem
 {
     protected function __construct($nameValue, $size, $numberUsers)
     {
         parent::__construct($nameValue, $size, $numberUsers);
     }
 
-    public function __toString() {
+    public function __toString() 
+    {
         echo "Todo correcto? Y yo que me alegro Expandable <3";
+    }
+    public function Use() //Preguntar $numberUsers
+    {
+        $this->numberUsers =+ 1;
     }
 
 }
