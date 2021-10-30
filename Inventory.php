@@ -45,8 +45,8 @@ class Inventory extends SalleGaming
         for ($i = 0; $i < $this->maxX; $i++) {
             for ($j = 0; $j < $this->maxY; $j++) {
                 if ($this->items[$i][$j] == $itemUser)
-                    $items[$i][$j] = null;
-                    //return true;
+                    $this->items[$i][$j] = null;
+                    return true;
             }
         }
     }
